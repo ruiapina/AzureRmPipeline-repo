@@ -17,6 +17,6 @@ steps:
     subscriptionId: '6787d4dc-e756-4649-baa9-a02cc38fa099'
     location: 'West Europe'
     templateLocation: 'Linked artifact'
-    csmParametersFile: 'CreateWebApp/azuredeploy.json'
+    csmFile: 'CreateWebApp/azuredeploy.json'
     overrideParameters: '-projectName AzureRmPipeline -linkedTemplateUri https://raw.githubusercontent.com/ruiapina/AzureRmPipeline-repo/master/CreateWebApp/linkedStorageAccount.json'
     deploymentMode: 'Incremental'
