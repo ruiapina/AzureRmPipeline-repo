@@ -14,7 +14,7 @@ steps:
   inputs:
     deploymentScope: 'Resource Group'
     azureResourceManagerConnection: 'AzureRmPipeline-conn'
-    subscriptionId: '6787d4dc-e756-4649-baa9-a02cc38fa099'
+    subscriptionId: 'c6da4c9f-ebf3-433a-b5d6-3f5e414200c9'
     action: 'Create Or Update Resource Group'
     resourceGroupName: 'PipelineDEV'
     location: 'West Europe'
