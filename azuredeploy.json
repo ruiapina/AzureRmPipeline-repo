@@ -7,14 +7,14 @@
       "minLength": 3,
       "maxLength": 11,
       "metadata": {
-        "description": "Specify a project name that is used to generate resource names."
+        "description": "Please Specify a project name that is used to generate resource names."
       }
     },
     "location": {
       "type": "string",
       "defaultValue": "[resourceGroup().location]",
       "metadata": {
-        "description": "Specify a location for the resources."
+        "description": "Please Specify a location for the resources."
       }
     },
     "linuxFxVersion": {
