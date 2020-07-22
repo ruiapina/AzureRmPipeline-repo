@@ -10,16 +10,13 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
-    deploymentScope: 'Resource Group'
+    deploymentScope: 'Subscription'
     azureResourceManagerConnection: 'AzureRmPipeline-conn'
     subscriptionId: '6787d4dc-e756-4649-baa9-a02cc38fa099'
-    action: 'Create Or Update Resource Group'
-    resourceGroupName: 'PipelineDEV'
     location: 'West Europe'
     templateLocation: 'Linked artifact'
-    csmFile: 'CreateWebApp/azuredeploy.json'
-    overrideParameters: 'projectName AzureRmPipeline -linkedTemplateUri https://raw.githubusercontent.com/ruiapina/AzureRmPipeline-repo/master/CreateWebApp/linkedStorageAccount.json'
+    csmParametersFile: 'CreateWebApp/azuredeploy.json'
+    overrideParameters: '-projectName AzureRmPipeline -linkedTemplateUri https://raw.githubusercontent.com/ruiapina/AzureRmPipeline-repo/master/CreateWebApp/linkedStorageAccount.json'
     deploymentMode: 'Incremental'
