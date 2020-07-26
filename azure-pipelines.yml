@@ -10,10 +10,15 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'AzureRmPipeline-conn'
+    subscriptionId: 'c6da4c9f-ebf3-433a-b5d6-3f5e414200c9'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'PipelineDEV'
+    location: 'West Europe'
+    templateLocation: 'Linked artifact'
+    csmFile: 'CreateWebApp/azuredeploy.json'
+    csmParametersFile: 'CreateWebApp/azuredeploy.parameters.json'
+    deploymentMode: 'Incremental'
