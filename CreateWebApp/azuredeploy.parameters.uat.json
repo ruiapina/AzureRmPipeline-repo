@@ -3,7 +3,7 @@
 	"contentVersion": "1.0.0.0",
 	"parameters": {	
 		"webAppName": {
-			"value": "UAT"
+			"value": "ruipina-UAT-app"
 		}
      }
   }
