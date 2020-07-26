@@ -4,7 +4,7 @@
   "parameters": {
     "webAppName": {
       "type": "string",
-      "defaultValue" : "AzureLinuxApp",
+      "defaultValue" : "ruipina-test-webapp",
       "metadata": {
         "description": "Base name of the resource such as web app name and app service plan "
       },
